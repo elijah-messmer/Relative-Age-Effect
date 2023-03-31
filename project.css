@@ -1,0 +1,199 @@
+:root {
+    --font-family-body: "Georgia", serif;
+    --font-family-header: "Arial", sans-serif;
+    --color-text: #242424;
+    --primary-color: #FF6701;
+    --secondary-color: #56ACFE;
+    --third-color: rgb(252, 237, 222);
+    --light-gray: #D3D3D3;
+  }
+  
+  body {
+    background-color: var(--third-color);
+  }
+
+  main {
+    font-family: var(--font-family-body);
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  h2 {
+    font-family: var(--font-family-header);
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  
+  h4 {
+    font-family: var(--font-family-header);
+  }
+
+  .handwriting {
+    font-family: "adobe-handwriting-frank", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  main a {
+    color: #EEEEEE
+  }
+  
+  main a:hover {
+    color: #EEEEEE
+  }
+  
+  main a:visited {
+    color: #EEEEEE
+  }
+  
+  footer {
+    background-color: #083358
+  }
+  
+  footer a {
+    color: #EEEEEE
+  }
+  
+  footer a:hover {
+    color: #EEEEEE
+  }
+  
+  footer a:visited {
+    color: #EEEEEE
+  }
+
+  .byline {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  
+  .response {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  button {
+    margin: 0 1em 0 1em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .btn {
+    width: 10rem;
+    height: 5rem;
+    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+    font-size: 20px;
+  }
+
+  .hide {
+	opacity: 0;
+  }
+
+  .highlighter {
+	opacity: 0.7;
+  }
+  
+  /* Scrollama Styling */
+
+  #scrolly {
+    position: relative;
+    padding: 1rem;
+  }
+
+  .scrolly-overlay {
+    position: relative;
+    padding: 0;
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+
+  .sticky-thing {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 0;
+    top: 0;
+    height: 100vh;
+    /* Center everything inside */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .step {
+    margin: 0 auto 2rem auto;
+    margin-bottom: 75rem;
+    /* background-color: #eee;
+    background-color: #fff;
+    color: black; */
+  }
+
+  .step p {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+
+
+  /* ai2html auto-generated styles */
+
+  #g-RAE-Illustrations-box ,
+	#g-RAE-Illustrations-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-RAE-Illustrations-box p {
+		margin:0;
+	}
+	#g-RAE-Illustrations-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-RAE-Illustrations-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-RAE-Illustrations-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-RAE-Illustrations-box .g-aiPointText p { white-space: nowrap; }
+	#g-RAE-Illustrations-Desktop_1-Response {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-RAE-Illustrations-Desktop_1-Response p {
+		font-family:arial,helvetica,sans-serif;
+		font-weight:bold;
+		line-height:19px;
+		opacity:1;
+		letter-spacing:0.05em;
+		font-size:16px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-RAE-Illustrations-Desktop_1-Response .g-pstyle0 {
+		font-family: 'Permanent Marker', cursive;
+		line-height:34px;
+		height:34px;
+		opacity:0.81;
+		font-size:29px;
+		text-align:center;
+	}
+	#g-RAE-Illustrations-Desktop_1-Response .g-pstyle1 {
+		text-align:center;
+	}
