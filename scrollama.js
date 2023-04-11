@@ -3,7 +3,7 @@ const scroller = scrollama();
 	scroller
 		.setup({
 			step: "#scrolly .scrolly-overlay .step",
-			offset: 0.75,
+			offset: 0.50,
 			debug: false
 		})
 		.onStepEnter(function({ element, index, direction}) {

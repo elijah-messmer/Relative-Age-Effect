@@ -20,8 +20,8 @@
   }
   
   h2 {
-    font-family: var(--font-family-header);
-    font-size: 2rem;
+    font-family: "adobe-handwriting-frank", sans-serif;
+    font-size: 4rem;
     margin-top: 1rem;
   }
   
@@ -34,17 +34,44 @@
     font-weight: 400;
     font-style: normal;
   }
+
+  .customButton {
+    /* background-color: #fea82fda; */
+    color: var(--color-text);
+    font-weight: 600;
+    font-family: var(--font-family-header);
+    /* border: 2px solid #fea82f;  */
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 1rem 0 1rem;
+    width: 14rem;
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  .customButton:hover {
+    /* background-color: #ff9b0ff3; */
+    /* border: 2px solid #fea82f; */
+    cursor: pointer;
+  }
+
+  .firstcharacter {
+    float: left;
+    font-size: 55px;
+    line-height: 40px;
+    padding-top: 8px;
+    padding-right: 8px;
+  }
   
   main a {
-    color: #EEEEEE
+    color: var(--color-text);
   }
   
   main a:hover {
-    color: #EEEEEE
+    color: var(--color-text);
   }
   
   main a:visited {
-    color: #EEEEEE
+    color: var(--color-text);
   }
   
   footer {
@@ -70,7 +97,6 @@
   
   .response {
     margin: 10px 0;
-    font-weight: bold;
   }
   
   .hidden {
@@ -78,15 +104,8 @@
   }
 
   button {
-    margin: 0 1em 0 1em;
+    /* margin: 0 1em 0 1em; */
     font-family: Arial, Helvetica, sans-serif;
-  }
-
-  .btn {
-    width: 10rem;
-    height: 5rem;
-    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
-    font-size: 20px;
   }
 
   .hide {
@@ -129,10 +148,10 @@
 
   .step {
     margin: 0 auto 2rem auto;
-    margin-bottom: 75rem;
-    /* background-color: #eee;
+    margin-bottom: 25rem;
+    background-color: #eee;
     background-color: #fff;
-    color: black; */
+    color: black;
   }
 
   .step p {
@@ -141,59 +160,32 @@
     font-size: 1.25rem;
   }
 
+  .hidden { visibility: hidden; }
 
-  /* ai2html auto-generated styles */
+  /* When it's less than 700 pixels wide, do normal scrollytelling */
+  @media only screen and (min-width: 700px) {
+    #scrolly.side-by-side {
+      display: flex;
+    }
 
-  #g-RAE-Illustrations-box ,
-	#g-RAE-Illustrations-box .g-artboard {
-		margin:0 auto;
-	}
-	#g-RAE-Illustrations-box p {
-		margin:0;
-	}
-	#g-RAE-Illustrations-box .g-aiAbs {
-		position:absolute;
-	}
-	#g-RAE-Illustrations-box .g-aiImg {
-		position:absolute;
-		top:0;
-		display:block;
-		width:100% !important;
-	}
-	#g-RAE-Illustrations-box .g-aiSymbol {
-		position: absolute;
-		box-sizing: border-box;
-	}
-	#g-RAE-Illustrations-box .g-aiPointText p { white-space: nowrap; }
-	#g-RAE-Illustrations-Desktop_1-Response {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-RAE-Illustrations-Desktop_1-Response p {
-		font-family:arial,helvetica,sans-serif;
-		font-weight:bold;
-		line-height:19px;
-		opacity:1;
-		letter-spacing:0.05em;
-		font-size:16px;
-		text-align:left;
-		color:rgb(0,0,0);
-		text-transform:none;
-		padding-bottom:0;
-		padding-top:0;
-		mix-blend-mode:normal;
-		font-style:normal;
-		height:auto;
-		position:static;
-	}
-	#g-RAE-Illustrations-Desktop_1-Response .g-pstyle0 {
-		font-family: 'Permanent Marker', cursive;
-		line-height:34px;
-		height:34px;
-		opacity:0.81;
-		font-size:29px;
-		text-align:center;
-	}
-	#g-RAE-Illustrations-Desktop_1-Response .g-pstyle1 {
-		text-align:center;
-	}
+    #scrolly.side-by-side > div {
+      flex-basis: 0;
+      flex-grow: 1;
+      flex-shrink: 1;
+      padding: 0.75em;
+    }
+
+    #scrolly.side-by-side .scrolly-overlay {
+      margin-top: 70vh;
+      order: 0;
+      /* Change these to adjust sizing options */
+      min-width: 15rem;
+      max-width: 20rem;
+    }
+
+    #scrolly.side-by-side .sticky-thing {
+      order: 1;
+      flex-grow: 2;
+    }
+  }
+/* End of Scrollama Styling */
