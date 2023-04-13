@@ -7,7 +7,25 @@
     --third-color: rgb(252, 237, 222);
     --light-gray: #D3D3D3;
   }
+
+  @media only screen and (max-width: 999px) {
+    .row {
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+
+    .customButton {
+      margin: 0;
+      padding: 0;
+    }
+  } 
   
+  @media only screen and (min-width: 1000px) {
+    .customButton {
+      margin: 1rem 1rem 0 1rem;
+    }
+  }
+
   body {
     background-color: var(--third-color);
   }
@@ -45,13 +63,16 @@
     border-radius: 5px;
     padding: 0 1rem 0 1rem;
     width: 14rem;
-    margin: 1rem 1rem 0 1rem;
   }
 
   .customButton:hover {
-    /* background-color: #ff9b0ff3; */
-    /* border: 2px solid #fea82f; */
     cursor: pointer;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .checkboxes {
+      text-align: center;
+    }
   }
 
   .firstcharacter {
@@ -146,24 +167,22 @@
     justify-content: center;
   }
 
-  .step {
-    margin: 0 auto 2rem auto;
-    margin-bottom: 25rem;
-    background-color: #eee;
-    background-color: #fff;
-    color: black;
+  @media only screen and (min-width: 1000px) {
+    .step {
+      margin: 0 auto 2rem auto;
+      margin-bottom: 125rem;
+    }
+
+    .step p {
+      text-align: center;
+      padding: 25rem;
+      font-size: 1.25rem;
+    }
   }
 
-  .step p {
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.25rem;
-  }
-
-  .hidden { visibility: hidden; }
 
   /* When it's less than 700 pixels wide, do normal scrollytelling */
-  @media only screen and (min-width: 700px) {
+  @media only screen and (max-width: 999px) {
     #scrolly.side-by-side {
       display: flex;
     }
@@ -186,6 +205,17 @@
     #scrolly.side-by-side .sticky-thing {
       order: 1;
       flex-grow: 2;
+    }
+
+    .step {
+      margin-bottom: 100rem;
+      /* background-color: #eee;
+      background-color: #fff;
+      color: black; */
+    }
+
+    .step p {
+      padding: 10rem;
     }
   }
 /* End of Scrollama Styling */
