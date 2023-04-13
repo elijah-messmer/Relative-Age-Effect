@@ -12,6 +12,8 @@
     .row {
       flex-wrap: nowrap;
       overflow: hidden;
+      padding-right: 1rem;
+      padding-left: 1rem;
     }
 
     .customButton {
@@ -23,9 +25,30 @@
   @media only screen and (min-width: 1000px) {
     .customButton {
       margin: 1rem 1rem 0 1rem;
+      padding: 0 1rem 0 1rem;
     }
   }
 
+  .customButton {
+    /* background-color: #fea82fda; */
+    color: var(--color-text);
+    font-weight: 600;
+    font-family: var(--font-family-header);
+    /* border: 2px solid #fea82f;  */
+    display: inline-block;
+    border-radius: 5px;
+    width: 14rem;
+  }
+
+  .customButton:hover {
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .checkboxes {
+      text-align: center;
+    }
+  }
   body {
     background-color: var(--third-color);
   }
@@ -51,28 +74,6 @@
     font-family: "adobe-handwriting-frank", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-
-  .customButton {
-    /* background-color: #fea82fda; */
-    color: var(--color-text);
-    font-weight: 600;
-    font-family: var(--font-family-header);
-    /* border: 2px solid #fea82f;  */
-    display: inline-block;
-    border-radius: 5px;
-    padding: 0 1rem 0 1rem;
-    width: 14rem;
-  }
-
-  .customButton:hover {
-    cursor: pointer;
-  }
-
-  @media only screen and (min-width: 1000px) {
-    .checkboxes {
-      text-align: center;
-    }
   }
 
   .firstcharacter {

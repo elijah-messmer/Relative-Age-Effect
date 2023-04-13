@@ -128,13 +128,7 @@ d3.select("#step-three").on('stepin', function() {
 // Start of Question Section //
 
 
-d3.select("#brush-img").style('opacity', 0);
-d3.select("#text-2").style('opacity', 0)
-d3.select("#path-2").style('opacity', 0)
-d3.select("#text-3").style('opacity', 0)
-d3.select("#path-3").style('opacity', 0)
-d3.selectAll(".check1").style('opacity', 0)
-d3.selectAll(".check2").style('opacity', 0)
+d3.selectAll("#brush-img, #text-2, #path-2, #text-3, #path-3, .check1, .check2, #text-2M, #brush-imgM").style('opacity', 0);
 
 const button = document.querySelector('#q1-1');
 const blueTest = document.querySelector('#blueTest');
@@ -152,27 +146,13 @@ document.querySelectorAll('section[id^="q1-"]').forEach(section => {
     if (sectionId === 'q1-1') {
       document.getElementById('q1-yes-response').classList.remove('hidden');
       document.getElementById('q1-no-response').classList.add('hidden');
-      d3.select("#text-1").transition().duration(500).style('opacity', 0);
-      d3.select("#path-1").transition().duration(500).style('opacity', 0);
-      d3.select("#text-2").transition().duration(500).style('opacity', 1);
-      d3.select("#path-2").transition().duration(500).style('opacity', 1);
-      d3.select("#text-3").transition().duration(500).style('opacity', 1);
-      d3.select("#path-3").transition().duration(500).style('opacity', 1);
-      d3.select("#brush-img").transition().duration(500).style('opacity', 1);
-      d3.selectAll(".check1").transition().duration(500).style('opacity', 1);
-      d3.selectAll(".check2").style('opacity', 0);
+      d3.selectAll("#text-1, #path-1, .check2, #text-1M").transition().duration(500).style('opacity', 0);
+      d3.selectAll("#text-2, #path-2, #text-3, #path-3, #brush-img, #brush-imgM, .check1, #text-2M").transition().duration(500).style('opacity', 1);
     } else if (sectionId === 'q1-2') {
       document.getElementById('q1-no-response').classList.remove('hidden');
       document.getElementById('q1-yes-response').classList.add('hidden');
-      d3.select("#text-1").transition().duration(500).style('opacity', 0);
-      d3.select("#path-1").transition().duration(500).style('opacity', 0);
-      d3.select("#text-2").transition().duration(500).style('opacity', 1);
-      d3.select("#path-2").transition().duration(500).style('opacity', 1);
-      d3.select("#text-3").transition().duration(500).style('opacity', 1);
-      d3.select("#path-3").transition().duration(500).style('opacity', 1);
-      d3.select("#brush-img").transition().duration(500).style('opacity', 1);
-      d3.selectAll(".check2").transition().duration(500).style('opacity', 1);
-      d3.selectAll(".check1").style('opacity', 0);
+      d3.selectAll("#text-1, #path-1, .check1, #text-1M").transition().duration(500).style('opacity', 0);
+      d3.selectAll("#text-2, #path-2, #text-3, #path-3, #brush-img, #brush-imgM, .check2, #text-2M").transition().duration(500).style('opacity', 1);
     } else if (buttonId === 'q2-yes') {
       document.getElementById('q2-yes-response').classList.remove('hidden');
       document.getElementById('q2-no-response').classList.add('hidden');
