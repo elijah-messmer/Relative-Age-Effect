@@ -127,24 +127,25 @@ d3.select("#step-three").on('stepin', function() {
 
 
 // Start of Question Section //
+
 // Hide question swithces
 d3.selectAll("#q1-2-desktop, #text-2, #path-2, #text-3, #path-3, .check1, .check2, #text-2M, #q1-2-mobile, #text-5, #path-5, #text-6, #path-6, #q2-2-desktop, .check3, .check4, #text-6M, #q2-2-mobile, #q3-2-desktop, #text-8, #path-8, .check5, .check6, #text-8M, #q3-2-mobile, .check7, .check8, #text-10, #path-10, #q4-2-desktop, #text-10M, #q4-2-mobile").style('opacity', 0);
 
 // Set up condition for questions 2-4
 let q1Selection = null;
-    document.getElementById('q1-1').addEventListener('click', function() {
-      q1Selection = 'yes';
-      console.log(q1Selection);
-    });
-    document.getElementById('q1-2').addEventListener('click', function() {
-      q1Selection = 'no';
-      console.log(q1Selection);
-    });
 
-// add event listener for section buttons
-document.querySelectorAll('section[id^="q"]').forEach(section => {
-  section.addEventListener('click', () => {
-    const sectionId = section.id;
+document.getElementById('q1-1').addEventListener('click', function() {
+  q1Selection = 'yes';
+  console.log(q1Selection);
+});
+document.getElementById('q1-2').addEventListener('click', function() {
+  q1Selection = 'no';
+  console.log(q1Selection);
+});
+
+
+// Update content based on button clicked
+function updateContent(q1Selection, sectionId) {
 
     // show/hide response messages based on section clicked
     if (sectionId === 'q1-1') {
@@ -238,5 +239,21 @@ document.querySelectorAll('section[id^="q"]').forEach(section => {
       d3.selectAll("#text-9, #path-9, .check7, #q4-1-desktop, #q4-1-mobile, #text-9M").transition().duration(700).style('opacity', 0);
       d3.selectAll("#text-10, #path-10, .check8, #q4-2-desktop, #q4-2-mobile, #text-10M").transition().duration(700).style('opacity', 1);
       }
+  };
+
+// add event listeners for section buttons
+document.querySelectorAll('section[id^="q"]').forEach(section => {
+  // click event listener
+  section.addEventListener('click', () => {
+    const sectionId = section.id;
+    updateContent(q1Selection, sectionId);
+  });
+
+  // keydown event listener
+  section.addEventListener('keydown', (event) => {
+    if (event.code === 'Enter' || event.code === 'Space') {
+      const sectionId = section.id;
+      updateContent(q1Selection, sectionId);
+    }
   });
 });
