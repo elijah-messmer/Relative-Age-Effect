@@ -201,7 +201,7 @@ function updateContent(q1Selection, sectionId) {
         d3.selectAll('#q3-yes-response-1, #q3-yes-response-2, #q3-no-response-1').attr('class', 'hidden');
       }
       d3.selectAll("#text-7, #path-7, .check6, #q3-1-desktop, #q3-1-mobile, #text-7M").transition().duration(700).style('opacity', 0);
-      d3.selectAll("#text-8, #path-8, #text-9, #path-9, .check5, #q3-2-desktop, #q3-2-mobile, #text-9M").transition().duration(700).style('opacity', 1);
+      d3.selectAll("#text-8, #path-8, #text-9, #path-9, .check5, #q3-2-desktop, #q3-2-mobile, #text-8M").transition().duration(700).style('opacity', 1);
     } else if (sectionId === 'q3-2') {
       if (q1Selection === 'yes') {
         // show response message 1 for q3 if user answered yes to q1
@@ -213,7 +213,7 @@ function updateContent(q1Selection, sectionId) {
         d3.selectAll('#q1-yes-response-2, #q3-no-response-1, #q3-no-response-2').attr('class', 'hidden');
       }
       d3.selectAll("#text-7, #path-7, .check5, #q3-1-desktop, #q3-1-mobile, #text-7M").transition().duration(700).style('opacity', 0);
-      d3.selectAll("#text-8, #path-8, #text-9, #path-9, .check6, #q3-2-desktop, #q3-2-mobile, #text-9M").transition().duration(700).style('opacity', 1);
+      d3.selectAll("#text-8, #path-8, #text-9, #path-9, .check6, #q3-2-desktop, #q3-2-mobile, #text-8M").transition().duration(700).style('opacity', 1);
     } else if (sectionId === 'q4-1') {
       if (q1Selection === 'yes') {
       // show response message 1 for q4 if user answered yes to q1
